@@ -78,6 +78,7 @@ def plotTime():
     plt.savefig('Transaction.png')
     plt.show()
     
+    tabledata = [[]]
     for i in range(1,lines+1):
         rowdata = []
         rowdata.append(i)
