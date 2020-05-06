@@ -1,5 +1,5 @@
 import apriori,brute_force
-
+from tabulate import tabulate
 #global varible
 minSupport = 0.3
 loop = 10
@@ -13,7 +13,7 @@ def timeTest(lines,filename):
     # number of lines to read in data
     for num_lines in range(1,lines+1,1):
         #measure brute force method
-        print('Brute Force Time Test for {} lines'.format(num_lines))
+        #('Brute Force Time Test for {} lines'.format(num_lines))
         
         t_start = time.perf_counter()
         
@@ -27,7 +27,7 @@ def timeTest(lines,filename):
         
         
         #similarly..
-        print('Apriori Time Test for {} lines'.format(num_lines))
+        #print('Apriori Time Test for {} lines'.format(num_lines))
         t_start = time.perf_counter()
         for i in range(loop):
             apriori.main(filename = filename,num_lines = num_lines)
@@ -36,6 +36,8 @@ def timeTest(lines,filename):
     return timeBF, timeApr
     
 def plotTime():
+    print('\n\n-----------Time Test Result-----------\n\n')
+    #plots
     lines = 20
     timeBF,timeApr = timeTest(lines,'data/increase_items.csv')
     plt.plot(range(1,lines+1),timeBF, label = 'BruteForce')
@@ -47,8 +49,24 @@ def plotTime():
     plt.ylabel('Process Time')
     plt.savefig('items.png')
     plt.show()
+    tabledata = [[]]
+    #tabledata[:,0] = range(1,lines+1)
+    #tabledata[:,1] = timeBF
     
-    lines = 100
+    for i in range(1,lines+1):
+        rowdata = []
+        rowdata.append(i)
+        rowdata.append(timeBF[i-1])
+        rowdata.append(timeApr[i-1])
+        tabledata.append(rowdata)
+    
+    headers = ['num of items','timeBF','timeApr']  
+    print(tabulate(tabledata,headers = headers,tablefmt = 'github'))
+    
+    
+    
+    #testing transactions
+    lines = 30
     timeBF,timeApr = timeTest(lines,'data/increase_transactions.csv')
     plt.plot(range(1,lines+1),timeBF, label = 'BruteForce')
     plt.plot(range(1,lines+1),timeApr, label = 'Apriori')
@@ -60,7 +78,15 @@ def plotTime():
     plt.savefig('Transaction.png')
     plt.show()
     
-        
+    for i in range(1,lines+1):
+        rowdata = []
+        rowdata.append(i)
+        rowdata.append(timeBF[i-1])
+        rowdata.append(timeApr[i-1])
+        tabledata.append(rowdata)
+    
+    headers = ['num of transactions','timeBF','timeApr']  
+    print(tabulate(tabledata,headers = headers,tablefmt = 'github'))
     
 
 def printResult():
@@ -69,8 +95,9 @@ def printResult():
     
 
 if __name__ == '__main__':
-    plotTime()
     printResult()
+    plotTime()
+    
     
     
     

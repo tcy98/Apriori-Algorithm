@@ -106,7 +106,7 @@ def printTable(dic,minSupport = 0.5):
     sets = list(dic.items())
     sets = [[list(x[0]),x[1]] for x in sets if x[1] >= minSupport]
     #print(sets)
-    print(tabulate(sets,headers = headers))
+    print(tabulate(sets,headers = headers,tablefmt = 'github'))
     
 
 def main(filename = None,SHOW = False,num_lines = 10):

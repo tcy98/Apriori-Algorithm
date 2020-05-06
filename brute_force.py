@@ -3,6 +3,7 @@
 #if n items is given, 2^n itemsets are created
 import csv
 from itertools import islice
+from tabulate import tabulate
 
 def gen_datasets(filename = None,num_lines = 10):
     if filename == None: return [[1,3,4],[2,3,5],[1,2,3,5],[2,5]]
@@ -68,7 +69,7 @@ def brute_force(num_lines = 10, filename = None):
 #         timelist.append(time.process_time() - t_start)
 #     print(timelist)
 
-from tabulate import tabulate
+
 def printTable(dic):
     print('Brute Force Result:')
     #sort dic in descending order
@@ -77,7 +78,7 @@ def printTable(dic):
     sets = list(dic.items())
     sets = [[list(x[0]),x[1]] for x in sets]
     #print(sets)
-    print(tabulate(sets,headers = headers))
+    print(tabulate(sets,headers = headers,tablefmt = 'github'))
     print('\n')
     
 def main(num_lines = 10, filename = None,SHOW = False):
