@@ -1,5 +1,5 @@
 import csv
-# follow implementation from  Machine Learning in Action by Peter Harrington
+
 def gen_datasets(filename=None, num_lines=10):
     if filename == None:
         return [[1, 3, 4], [2, 3, 5], [1, 2, 3, 5], [2, 5]]
@@ -11,7 +11,7 @@ def gen_datasets(filename=None, num_lines=10):
 
 
 # Ck contains Candidate itemsets with length k
-# Thus C1 contains all signle item
+# Thus C1 contains all single item
 def createC1(dataSet):
     C1 = []
     for transaction in dataSet:
