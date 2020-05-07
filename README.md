@@ -15,7 +15,9 @@
 
 ## Test:
 [test.py](test.py): compare and analyse performances of two solutions 
+
 Measure time for both solutions with data that has incrase numbers of items/numbers of transactions.
+
 Taking the average of 10 times to reduce error
 
 ## Results
