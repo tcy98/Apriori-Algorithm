@@ -2,7 +2,7 @@ import apriori,brute_force
 from tabulate import tabulate
 #global varible
 minSupport = 0.3
-loop = 1
+loop = 10
 
 import matplotlib.pyplot as plt
 import time
