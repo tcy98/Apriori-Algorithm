@@ -23,7 +23,7 @@ def gen_itemsets(datasets):
                 itemlist.append(item)
 
     itemsets = []  #contain every possible itemset
-  
+    
     from itertools import combinations
     for i in range(1,len(itemlist)+1):    
         comb = combinations(itemlist,i)
@@ -32,14 +32,15 @@ def gen_itemsets(datasets):
     #print(itemsets)
     return itemsets
 
-
+#find how many times itemset exist in each transaction
 def calculate_support(itemset,datasets):
     counter = 0
-    for dataset in datasets:    
-        result = all(elem in dataset for elem in itemset)
+    for tran in datasets:    
+        result = all(elem in tran for elem in itemset)
         if(result): counter += 1
     return counter/len(datasets)
 
+#return a dictionary with itemset as keys and support as value
 def gen_sup_list(itemsets,datasets,minSupport = 0.5):
     itemSupDic = {}
     sup_val = 0
