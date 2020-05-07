@@ -3,6 +3,8 @@
 
 ## Association Rule Mining
 • developed to analyze market basket data
+
 • identified groups of market items that customers tended to buy in association with each other
+
 • People who buy soap and shampoo have an increased probability of buying hairspray.
 
