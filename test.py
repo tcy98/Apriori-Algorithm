@@ -44,7 +44,7 @@ def plotTime():
     plt.plot(range(1,lines+1),timeApr, label = 'Apriori')
     plt.legend(loc = 'best')
         
-    plt.title('Incrase Items in Dataset')
+    plt.title('Increase Items in Dataset')
     plt.xlabel('Num of Items')
     plt.ylabel('Process Time')
     plt.savefig('items.png')
@@ -66,13 +66,13 @@ def plotTime():
     
     
     #testing transactions
-    lines = 60
+    lines = 100
     timeBF,timeApr = timeTest(lines,'data/increase_transactions.csv')
-    plt.plot(range(1,lines+1),timeBF, label = 'BruteForce')
-    plt.plot(range(1,lines+1),timeApr, label = 'Apriori')
+    plt.plot(range(4,lines+1),timeBF[3:], label = 'BruteForce')
+    plt.plot(range(4,lines+1),timeApr[3:], label = 'Apriori')
     plt.legend(loc = 'best')
     
-    plt.title('Incrase Transactions in Dataset')
+    plt.title('Increase Transactions in Dataset')
     plt.xlabel('Num of Transactions')
     plt.ylabel('Process Time')
     plt.savefig('Transaction.png')
