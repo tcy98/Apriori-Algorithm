@@ -2,7 +2,7 @@ import apriori,brute_force
 from tabulate import tabulate
 #global varible
 minSupport = 0.3
-loop = 10
+loop = 1
 
 import matplotlib.pyplot as plt
 import time
@@ -43,7 +43,7 @@ def plotTime():
     plt.plot(range(1,lines+1),timeBF, label = 'BruteForce')
     plt.plot(range(1,lines+1),timeApr, label = 'Apriori')
     plt.legend(loc = 'best')
-    
+        
     plt.title('Incrase Items in Dataset')
     plt.xlabel('Num of Items')
     plt.ylabel('Process Time')
@@ -66,7 +66,7 @@ def plotTime():
     
     
     #testing transactions
-    lines = 30
+    lines = 60
     timeBF,timeApr = timeTest(lines,'data/increase_transactions.csv')
     plt.plot(range(1,lines+1),timeBF, label = 'BruteForce')
     plt.plot(range(1,lines+1),timeApr, label = 'Apriori')
