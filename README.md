@@ -9,7 +9,7 @@
 • People who buy soap and shampoo have an increased probability of buying hairspray 
 
 ## Code
-[brute_force.py](brute_force.py): a brute_force implementation
+[brute_force.py](brute_force.py): a brute_force implementation 
 [apriori.py](apriori.py): use Apriori algorithm
 
 
