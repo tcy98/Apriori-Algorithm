@@ -11,7 +11,12 @@
 ## Code
 [brute_force.py](brute_force.py): a brute_force implementation to find frequent itemsets  
 [apriori.py](apriori.py): use Apriori algorithm to find frequent itemsets  
+
+
+## Test:
 [test.py](test.py): compare and analyse performances of two solutions 
+Measure time for both solutions with data that has incrase numbers of items/numbers of transactions.
+Taking the average of 10 times to reduce error
 
 ## Results
 
