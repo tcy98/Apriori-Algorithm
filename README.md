@@ -15,7 +15,9 @@
 
 
 ## Test:
-[test.py](test.py): compare and analyze performances of two solutions 
+[test.py](test.py): compare the [results](https://github.com/tcy98/pa04-Spring2020/runs/651742970?check_suite_focus=true)
+
+Analyze performances of two solutions:
 
 Measure time for both solutions with data that has increase numbers of items/numbers of transactions.
 
