@@ -9,7 +9,7 @@
 • People who buy soap and shampoo have an increased probability of buying hairspray 
 
 ## Code
-[brute_force.py](brute_force.py):a brute_force implementation to find frequent itemsets  
+[brute_force.py](brute_force.py): a brute_force implementation to find frequent itemsets  
 [apriori.py](apriori.py): use Apriori algorithm to find frequent itemsets  
 [test.py](test.py): compare and analyse performances of two solutions 
 
