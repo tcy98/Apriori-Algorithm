@@ -58,9 +58,6 @@ def brute_force(num_lines = 10, filename = None):
     itemsets = gen_itemsets(datasets)
     return gen_sup_list(itemsets, datasets)
 
-
-
-
 def printTable(dic):
     print('Brute Force Result:')
     #sort dic in descending order
