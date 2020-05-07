@@ -58,16 +58,6 @@ def brute_force(num_lines = 10, filename = None):
     return gen_sup_list(itemsets, datasets)
 
 
-# import time
-#
-# #plot the time it takes to run n lines of data
-# def plot(n):
-#     timelist = []
-#     for i in range(1,n):
-#         t_start = time.process_time()
-#         brute_force(i)
-#         timelist.append(time.process_time() - t_start)
-#     print(timelist)
 
 
 def printTable(dic):
