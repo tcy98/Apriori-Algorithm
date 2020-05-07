@@ -10,6 +10,7 @@
 
 ## Code
 [brute_force.py](brute_force.py): a brute_force implementation 
+
 [apriori.py](apriori.py): use Apriori algorithm
 
 
